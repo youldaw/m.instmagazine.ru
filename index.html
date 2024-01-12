@@ -2,8 +2,9 @@
 <html lang="ru">
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
-		<link rel="stylesheet" type="text/css" href="libs/bootstrap5/bootstrap.min.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="libs/bootstrap5/bootstrap.min.css" media="screen">
+
 		<link rel="stylesheet icon" type="text/css" href="css/style.css" media="screen">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
@@ -12,9 +13,96 @@
 	<body>
 		<div class="wrapper">
 			<header class="header">
-				<div class="container">
-					<div class="row">
+				<div class="container-fluid top-con">
+					<div class="container">
+						<div class="header-top">
+							<div class="head-location">
+								<a href="#!" class="head-location-btn">
+									<span class="loc-icon"><img src="images/icons/location-icon.svg" alt=""></span>
+									<span class="loc-text">Екатеринбург</span>
+									<span class="loc-arrow"><img src="images/icons/location-arrow-icon.svg" alt=""></span>
+								</a>
+							</div>
 
+							<div class="head-contact">
+								<a href="mailto:umico@list.ru" class="mail-link">umico@list.ru</a>
+								<div class="head-contact-tel">
+									<div class="tel-link">
+										<a href="tel:+7 (343) 206-67-57">+7 (343) 206-67-57</a>
+										<span>с 10:00 до 19:00</span>
+									</div>
+									<a href="#!" class="callback-btn">Обратный звонок</a>
+								</div>
+								<div class="head-social">
+									<a href="#!" class="head-wt"><img src="images/icons/whatsapp-icon.svg" alt=""></a>
+									<a href="#!" class="head-tg"><img src="images/icons/telegram-icon.svg" alt=""></a>
+								</div>
+							</div>
+
+							<nav class="navbar navbar-expand-lg">
+								<ul class="navbar-nav">
+									<li class="nav-item">
+										<a class="nav-link" href="#!">Блог</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#!">Новости</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#!">Оплата и доставка</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#!">Контакты</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="head-block">
+						<div class="head-logo">
+							<a href="#!" class="logo-link">
+								<img src="images/header-logo.png" alt="">
+								<span>Инструменты и оснастка</span>
+							</a>
+						</div>
+
+						<div class="head-catalog">
+							<button class="catalog-btn">
+								<span class="text">Каталог</span>
+								<span class="catalog-arrow">
+									<span class="one"></span>
+									<span class="two"></span>
+									<span class="three"></span>
+								</span>
+							</button>
+
+							<div class="head-search">
+								<form action="#!">
+									<input type="text" name="search" placeholder="Поиск..">
+									<button type="submit" class="search-btn"><img src="images/icons/search-icon.svg" alt=""></button>
+								</form>
+							</div>
+						</div>
+
+						<div class="head-menu">
+							<a href="#!" class="login">
+								<span class="icon"><img src="images/icons/user-icon.svg" alt=""></span>
+								<span class="text">Войти</span>
+							</a>
+							<a href="#!" class="login">
+								<span class="icon"><img src="images/icons/clock-icon.svg" alt=""></span>
+								<span class="text">Статус заказа</span>
+							</a>
+							<a href="#!" class="login">
+								<span class="icon"><img src="images/icons/favorite-icon.svg" alt=""></span>
+								<span class="text">Избранное</span>
+							</a>
+							<a href="#!" class="login">
+								<span class="icon"><img src="images/icons/cart-icon.svg" alt=""></span>
+								<span class="text">Корзина</span>
+							</a>
+						</div>
 					</div>
 				</div>
 			</header>
@@ -22,8 +110,141 @@
 			<main>
 				<section class="main-sec">
 					<div class="container">
+						<div class="main-block">
+							<div class="main-left">
+								<div class="main-category">
+									<a href="#!">
+										<img src="images/main-category-img.png" alt="">
+										<span class="text">Измерительный инструмент</span>
+									</a>
+									<a href="#!">
+										<img src="images/main-category-img.png" alt="">
+										<span class="text">Оснастка станочная</span>
+									</a>
+									<a href="#!">
+										<img src="images/main-category-img.png" alt="">
+										<span class="text">Микрорезцы</span>
+									</a>
+									<a href="#!">
+										<img src="images/main-category-img.png" alt="">
+										<span class="text">Оснастка</span>
+									</a>
+									<a href="#!">
+										<img src="images/main-category-img.png" alt="">
+										<span class="text">Оснастка станочная</span>
+									</a>
+									<a href="#!">
+										<img src="images/main-category-img.png" alt="">
+										<span class="text">Оснастка станочная</span>
+									</a>
+									<a href="#!">
+										<img src="images/main-category-img.png" alt="">
+										<span class="text">Микрорезцы</span>
+									</a>
+								</div>
+
+								<div class="main-cat-btn">
+									<a href="#!" class="link-btn all-category-link">
+										<span class="btn-text">Все категории</span>
+										<span class="btn-arrow">
+											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+												<circle cx="18" cy="18" r="18" fill="#F4F4F4"/>
+												<path d="M16 14L20 18L16 22" stroke="#343434"/>
+											</svg>
+										</span>
+									</a>
+								</div>
+							</div>
+
+							<div class="main-right">
+								<div class="main-slide">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<a href="#!" class="main-slide-img">
+												<img src="images/banner-sale-img.jpg" alt="">
+											</a>
+										</div>
+
+										<div class="swiper-slide">
+											<a href="#!" class="main-slide-img">
+												<img src="images/banner-sale-img.jpg" alt="">
+											</a>
+										</div>
+
+										<div class="swiper-slide">
+											<a href="#!" class="main-slide-img">
+												<img src="images/banner-sale-img.jpg" alt="">
+											</a>
+										</div>
+									</div>
+
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="info-sec">
+					<div class="container">
 						<div class="row">
-							
+							<div class="col-lg-4">
+								<div class="info-block">
+									<div class="info-block-icon">
+										<img src="images/icons/info-icon1.svg" alt="">
+									</div>
+									<div class="info-block-text">
+										<p>Скорость</p>
+										<span>С момента оплаты до момента <br> отправки не более 2-х дней</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="info-block">
+									<div class="info-block-icon">
+										<img src="images/icons/info-icon2.svg" alt="">
+									</div>
+									<div class="info-block-text">
+										<p>Экономия</p>
+										<span>До 40% ваших денежных средств <br> могут быть сохранены.</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="info-block">
+									<div class="info-block-icon">
+										<img src="images/icons/info-icon3.svg" alt="">
+									</div>
+									<div class="info-block-text">
+										<p>Надежность</p>
+										<span>Более 5-и лет на рынке <br> снабжения предприятий</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<section class="popular-sec">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-3">
+								<div class="popular-left">
+									<div class="title">
+										<h2 class="title-h2">Популярные категории</h2>
+									</div>
+
+									<a href="#!" class="link-btn blue all-category-link">
+										<span class="btn-text">Все категории</span>
+										<span class="btn-arrow">
+											<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+												<circle cx="18" cy="18" r="18" fill="#F4F4F4"/>
+												<path d="M16 14L20 18L16 22" stroke="#343434"/>
+											</svg>
+										</span>
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -39,9 +260,10 @@
 		</div>
 
 		<script src="js/jquery-3.7.0.min.js"></script>
+		<script src="js/swiper-bundle.min.js"></script>
 		<script src="libs/bootstrap5/popper.js"></script>
 		<script src="libs/bootstrap5/bootstrap.min.js"></script>
-		<script src="js/swiper-bundle.min.js"></script>
+
 		<script src="js/script.js"></script>
 	</body>
 </html>
