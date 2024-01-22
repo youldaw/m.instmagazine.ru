@@ -7,6 +7,16 @@ $(function () {
     });
 
 
+    $('.moreless-button').click(function () {
+        $('.moretext').toggleClass('active');
+        if ($('.moreless-button').text() == "Читать все") {
+            $(this).text("Скрывать")
+        } else {
+            $(this).text("Читать все")
+        }
+    });
+
+
     // Main slide
     var swiper = new Swiper(".main-slide", {
         slidesPerView: 1,
