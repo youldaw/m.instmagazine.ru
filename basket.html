@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="libs/bootstrap5/bootstrap.min.css" media="screen">
+
+		<link rel="stylesheet icon" type="text/css" href="css/style.css" media="screen">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<title>Корзина</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container-fluid top-con">
+					<div class="container">
+						<div class="header-top">
+							<div class="head-location">
+								<a href="#!" class="head-location-btn">
+									<span class="loc-icon"><img src="images/icons/location-icon.svg" alt=""></span>
+									<span class="loc-text">Екатеринбург</span>
+									<span class="loc-arrow"><img src="images/icons/location-arrow-icon.svg" alt=""></span>
+								</a>
+							</div>
+
+							<div class="head-contact">
+								<a href="mailto:umico@list.ru" class="mail-link">umico@list.ru</a>
+								<div class="head-contact-tel">
+									<div class="tel-link">
+										<a href="tel:+7 (343) 206-67-57">+7 (343) 206-67-57</a>
+										<span>с 10:00 до 19:00</span>
+									</div>
+									<a href="#!" class="callback-btn">Обратный звонок</a>
+								</div>
+								<div class="head-social">
+									<a href="#!" class="head-wt"><img src="images/icons/whatsapp-icon.svg" alt=""></a>
+									<a href="#!" class="head-tg"><img src="images/icons/telegram-icon.svg" alt=""></a>
+								</div>
+							</div>
+
+							<nav class="navbar navbar-expand-lg">
+								<ul class="navbar-nav">
+									<li class="nav-item">
+										<a class="nav-link" href="#!">Блог</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#!">Новости</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#!">Оплата и доставка</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#!">Контакты</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="head-block">
+						<div class="head-logo">
+							<a href="#!" class="logo-link">
+								<img src="images/header-logo.png" alt="">
+								<span>Инструменты и оснастка</span>
+							</a>
+						</div>
+
+						<div class="head-catalog">
+							<button class="catalog-btn">
+								<span class="text">Каталог</span>
+								<span class="catalog-arrow">
+									<span class="one"></span>
+									<span class="two"></span>
+									<span class="three"></span>
+								</span>
+							</button>
+
+							<div class="head-search">
+								<form action="#!">
+									<input type="text" name="search" placeholder="Поиск..">
+									<button type="submit" class="search-btn"><img src="images/icons/search-icon.svg" alt=""></button>
+								</form>
+							</div>
+						</div>
+
+						<div class="head-menu">
+							<a href="#!" class="login">
+								<span class="icon"><img src="images/icons/user-icon.svg" alt=""></span>
+								<span class="text">Войти</span>
+							</a>
+							<a href="#!" class="login">
+								<span class="icon"><img src="images/icons/clock-icon.svg" alt=""></span>
+								<span class="text">Статус заказа</span>
+							</a>
+							<a href="#!" class="login">
+								<span class="icon"><img src="images/icons/favorite-icon.svg" alt=""></span>
+								<span class="text">Избранное</span>
+							</a>
+							<a href="#!" class="login">
+								<span class="icon"><img src="images/icons/cart-icon.svg" alt=""></span>
+								<span class="text">Корзина</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<main>
+                <div class="breadcrumbs-sec">
+                    <div class="container">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="#!">Главная</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Корзина</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <section class="basket-sec">
+                    <div class="container">
+                        <div class="title">
+                            <h1 class="title-h1">Корзина <sup class="cart-count">4 шт</sup></h1>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <div class="basket-left">
+                                    <div class="empty-trash">
+                                        <button type="button" class="trash-btn">Очистить корзину <img src="images/icons/trash-icon.svg" alt=""></button>
+                                    </div>
+
+                                    <div class="basket-block">
+                                        <div class="basket-img">
+                                            <img src="images/basket-img.png" alt="">
+                                        </div>
+                                        <div class="basket-text">
+                                            <div class="basket-text-top">
+                                                <p class="b-name">Наименование</p>
+                                                <span class="b-code">Артикул</span>
+                                            </div>
+
+                                            <div class="basket-bottom">
+                                                <div class="b-price">
+                                                    <span>3 402 000 ₽</span>
+                                                    <p>1 868 000 ₽ </p>
+                                                </div>
+                                                <div class="subcat-count">
+                                                    <button type="button" class="minus">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+                                                            <path d="M0 1H12" stroke="#424242"/>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="1">
+                                                    <button type="button" class="plus">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                            <path d="M0 6H12" stroke="#424242"/>
+                                                            <path d="M6 12L6 -3.57628e-07" stroke="#424242"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="b-price count-price">
+                                                    <span>3 402 000 ₽</span>
+                                                    <p>1 868 000 ₽ </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="basket-delete">
+                                            <span>удалить</span>
+                                            <img src="images/icons/basket-delete-icon.svg" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="basket-block">
+                                        <div class="basket-img">
+                                            <img src="images/basket-img.png" alt="">
+                                        </div>
+                                        <div class="basket-text">
+                                            <div class="basket-text-top">
+                                                <p class="b-name">Наименование</p>
+                                                <span class="b-code">Артикул</span>
+                                            </div>
+
+                                            <div class="basket-bottom">
+                                                <div class="b-price">
+                                                    <span>3 402 000 ₽</span>
+                                                    <p>1 868 000 ₽ </p>
+                                                </div>
+                                                <div class="subcat-count">
+                                                    <button type="button" class="minus">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+                                                            <path d="M0 1H12" stroke="#424242"/>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="1">
+                                                    <button type="button" class="plus">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                            <path d="M0 6H12" stroke="#424242"/>
+                                                            <path d="M6 12L6 -3.57628e-07" stroke="#424242"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="b-price count-price">
+                                                    <span>3 402 000 ₽</span>
+                                                    <p>1 868 000 ₽ </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="basket-delete">
+                                            <span>удалить</span>
+                                            <img src="images/icons/basket-delete-icon.svg" alt="">
+                                        </button>
+                                    </div>
+
+                                    <div class="basket-block">
+                                        <div class="basket-img">
+                                            <img src="images/basket-img.png" alt="">
+                                        </div>
+                                        <div class="basket-text">
+                                            <div class="basket-text-top">
+                                                <p class="b-name">Наименование</p>
+                                                <span class="b-code">Артикул</span>
+                                            </div>
+
+                                            <div class="basket-bottom">
+                                                <div class="b-price">
+                                                    <span>3 402 000 ₽</span>
+                                                    <p>1 868 000 ₽ </p>
+                                                </div>
+                                                <div class="subcat-count">
+                                                    <button type="button" class="minus">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+                                                            <path d="M0 1H12" stroke="#424242"/>
+                                                        </svg>
+                                                    </button>
+                                                    <input type="number" value="1">
+                                                    <button type="button" class="plus">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                            <path d="M0 6H12" stroke="#424242"/>
+                                                            <path d="M6 12L6 -3.57628e-07" stroke="#424242"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="b-price count-price">
+                                                    <span>3 402 000 ₽</span>
+                                                    <p>1 868 000 ₽ </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" class="basket-delete">
+                                            <span>удалить</span>
+                                            <img src="images/icons/basket-delete-icon.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="basket-right">
+                                    <p class="basket-total-text">Итого:</p>
+                                    <div class="basket-total">
+                                        <span>3 402 000 ₽</span>
+                                        <p>1 868 000 ₽</p>
+                                    </div>
+                                    <div class="basket-total-btns">
+                                        <a href="#!" class="go-to-checkout">Перейти к оформлению</a>
+                                        <button class="quick-order">Быстрый заказ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="together-sec">
+                    <div class="container">
+                        <div class="together-slide">
+                            <div class="title">
+                                <h2 class="title-h2">Вместе с этим покупают</h2>
+
+                                <div class="swiper-btns">
+                                    <button class="swiper-button-prev">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                                            <ellipse cx="26" cy="26" rx="26" ry="26" transform="rotate(180 26 26)" fill="#F4F4F4"/>
+                                            <path d="M29 32L23 26L29 20" stroke="#343434"/>
+                                        </svg>
+                                    </button>
+                                    <button class="swiper-button-next">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                                            <ellipse cx="26" cy="26" rx="26" ry="26" fill="#F4F4F4"/>
+                                            <path d="M23 20L29 26L23 32" stroke="#343434"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="xit-block">
+                                        <div class="xit-top">
+                                            <div class="xit-mark">Хит</div>
+                                            <div class="xit-img">
+                                                <img src="images/xit-img.png" alt="">
+                                            </div>
+                                        </div>
+    
+                                        <div class="xit-body">
+                                            <div class="xit-rating">
+                                                <div class="rating-star">
+                                                    <img src="images/icons/xit-star-icon.svg" alt="">
+                                                </div>
+                                                <span>5.0</span>
+                                            </div>
+                                            <div class="xit-text">
+                                                <p>Осевой твердосплавный инструмент</p>
+                                            </div>
+                                            <div class="xit-info-block">
+                                                <div class="xit-info">
+                                                    <p>Диаметр</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">12</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                            </div>
+                                            <div class="xit-price">
+                                                <span>500 ₽</span>
+                                            </div>
+                                            <div class="xit-stock">
+                                                <span class="stock-status"></span>
+                                                <p>В наличии</p>
+                                            </div>
+                                            <div class="xit-btns">
+                                                <button class="xit-add-cart">В корзину</button>
+                                                <a href="#!" class="xit-link">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="xit-block">
+                                        <div class="xit-top">
+                                            <div class="xit-mark">Хит</div>
+                                            <div class="xit-img">
+                                                <img src="images/xit-img.png" alt="">
+                                            </div>
+                                        </div>
+    
+                                        <div class="xit-body">
+                                            <div class="xit-rating">
+                                                <div class="rating-star">
+                                                    <img src="images/icons/xit-star-icon.svg" alt="">
+                                                </div>
+                                                <span>5.0</span>
+                                            </div>
+                                            <div class="xit-text">
+                                                <p>Осевой твердосплавный инструмент</p>
+                                            </div>
+                                            <div class="xit-info-block">
+                                                <div class="xit-info">
+                                                    <p>Диаметр</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">12</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                            </div>
+                                            <div class="xit-price">
+                                                <span>500 ₽</span>
+                                            </div>
+                                            <div class="xit-stock">
+                                                <span class="stock-status"></span>
+                                                <p>В наличии</p>
+                                            </div>
+                                            <div class="xit-btns">
+                                                <button class="xit-add-cart">В корзину</button>
+                                                <a href="#!" class="xit-link">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="xit-block">
+                                        <div class="xit-top">
+                                            <div class="xit-mark">Хит</div>
+                                            <div class="xit-img">
+                                                <img src="images/xit-img.png" alt="">
+                                            </div>
+                                        </div>
+    
+                                        <div class="xit-body">
+                                            <div class="xit-rating">
+                                                <div class="rating-star">
+                                                    <img src="images/icons/xit-star-icon.svg" alt="">
+                                                </div>
+                                                <span>5.0</span>
+                                            </div>
+                                            <div class="xit-text">
+                                                <p>Осевой твердосплавный инструмент</p>
+                                            </div>
+                                            <div class="xit-info-block">
+                                                <div class="xit-info">
+                                                    <p>Диаметр</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">12</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                            </div>
+                                            <div class="xit-price">
+                                                <span>500 ₽</span>
+                                            </div>
+                                            <div class="xit-stock">
+                                                <span class="stock-status"></span>
+                                                <p>В наличии</p>
+                                            </div>
+                                            <div class="xit-btns">
+                                                <button class="xit-add-cart">В корзину</button>
+                                                <a href="#!" class="xit-link">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="xit-block">
+                                        <div class="xit-top">
+                                            <div class="xit-mark">Хит</div>
+                                            <div class="xit-img">
+                                                <img src="images/xit-img.png" alt="">
+                                            </div>
+                                        </div>
+    
+                                        <div class="xit-body">
+                                            <div class="xit-rating">
+                                                <div class="rating-star">
+                                                    <img src="images/icons/xit-star-icon.svg" alt="">
+                                                </div>
+                                                <span>5.0</span>
+                                            </div>
+                                            <div class="xit-text">
+                                                <p>Осевой твердосплавный инструмент</p>
+                                            </div>
+                                            <div class="xit-info-block">
+                                                <div class="xit-info">
+                                                    <p>Диаметр</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">12</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                            </div>
+                                            <div class="xit-price">
+                                                <span>500 ₽</span>
+                                            </div>
+                                            <div class="xit-stock">
+                                                <span class="stock-status"></span>
+                                                <p>В наличии</p>
+                                            </div>
+                                            <div class="xit-btns">
+                                                <button class="xit-add-cart">В корзину</button>
+                                                <a href="#!" class="xit-link">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="xit-block">
+                                        <div class="xit-top">
+                                            <div class="xit-mark">Хит</div>
+                                            <div class="xit-img">
+                                                <img src="images/xit-img.png" alt="">
+                                            </div>
+                                        </div>
+    
+                                        <div class="xit-body">
+                                            <div class="xit-rating">
+                                                <div class="rating-star">
+                                                    <img src="images/icons/xit-star-icon.svg" alt="">
+                                                </div>
+                                                <span>5.0</span>
+                                            </div>
+                                            <div class="xit-text">
+                                                <p>Осевой твердосплавный инструмент</p>
+                                            </div>
+                                            <div class="xit-info-block">
+                                                <div class="xit-info">
+                                                    <p>Диаметр</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">12</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                            </div>
+                                            <div class="xit-price">
+                                                <span>500 ₽</span>
+                                            </div>
+                                            <div class="xit-stock">
+                                                <span class="stock-status"></span>
+                                                <p>В наличии</p>
+                                            </div>
+                                            <div class="xit-btns">
+                                                <button class="xit-add-cart">В корзину</button>
+                                                <a href="#!" class="xit-link">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+			<footer class="footer">
+				<div class="container">
+					<div class="ftr-block">
+						<div class="row">
+							<div class="col-lg-3">
+								<a href="#!" class="ftr-logo">
+									<img src="images/footer-logo.png" alt="">
+									<span>Инструменты и оснастка</span>
+								</a>
+							</div>
+
+							<div class="col-lg-3">
+								<div class="ftr-menu">
+									<a href="#!" class="ftr-menu-link">Личный кабинет</a>
+									<a href="#!" class="ftr-menu-link">Вход/Регистрация</a>
+									<a href="#!" class="ftr-menu-link">Мои заказы</a>
+									<a href="#!" class="ftr-menu-link">Статус заказа</a>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="ftr-menu">
+									<a href="#!" class="ftr-menu-link">Каталог</a>
+									<a href="#!" class="ftr-menu-link">Категория 1</a>
+									<a href="#!" class="ftr-menu-link">Категория 2</a>
+									<a href="#!" class="ftr-menu-link">Категория 2</a>
+									<a href="#!" class="ftr-menu-link">Категория 2</a>
+									<a href="#!" class="ftr-menu-link">Категория 2</a>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="ftr-menu">
+									<a href="#!" class="ftr-menu-link">О компании</a>
+									<a href="#!" class="ftr-menu-link">Блог</a>
+									<a href="#!" class="ftr-menu-link">Новости</a>
+									<a href="#!" class="ftr-menu-link">Оплата и доставка</a>
+									<a href="#!" class="ftr-menu-link">Контакты</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="ftr-end">
+							<div class="ftr-contact">
+								<div class="ftr-contact-tel">
+									<a href="tel:9 (999) 999-99-99">9 (999) 999-99-99</a>
+									<span>с 10:00 до 19:00</span>
+								</div>
+								<a href="#!" class="ftr-contact-call">
+									<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle cx="17.5" cy="17.5" r="17" stroke="white"/>
+										<path d="M18.9235 17.9223C17.7359 19.1089 16.3599 20.2446 15.816 19.7007C15.038 18.9229 14.5579 18.2448 12.8413 19.6242C11.1255 21.0029 12.4437 21.9225 13.1977 22.6756C14.068 23.5457 17.312 22.7221 20.5185 19.517C23.7243 16.3111 24.5458 13.0677 23.6748 12.1976C22.9208 11.4431 22.0055 10.1259 20.6265 11.8413C19.2469 13.5568 19.9243 14.0368 20.7038 14.8154C21.2455 15.3592 20.1104 16.7349 18.9235 17.9223Z" fill="white"/>
+									</svg>											
+									Заказать звонок
+								</a>
+							</div>
+
+							<div class="ftr-social">
+								<a href="#!" class="ftr-tg">Telegram</a>
+								<a href="#!" class="ftr-wt">WhatsApp</a>
+								<a href="#!" class="ftr-vb">Viber</a>
+							</div>
+
+							<div class="ftr-info">
+								<div class="ftr-info-in">
+									<p>@2014-2023 <span class="mob">Все права защищены</span></p>
+									<a href="#!">Политика конфиденциальности</a>
+								</div>
+								<a href="#!" class="ftr-offer">Договор оферты</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script src="js/jquery-3.7.0.min.js"></script>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="libs/bootstrap5/popper.js"></script>
+		<script src="libs/bootstrap5/bootstrap.min.js"></script>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
