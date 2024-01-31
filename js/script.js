@@ -33,10 +33,36 @@ $(function () {
         $(this).parent().addClass('active');
     });
 
+
+    // mob filter menu
+    $('.mob-filter-btn, .filter-closer-btn').on('click', function (e) {
+        e.preventDefault();
+        $('.side-col').toggleClass('active');
+        $('body').toggleClass('no-scroll');
+    });
+
+    $('.side-item > p').on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $(this).parent().toggleClass('active');
+    });
+
     // Выпадающее окно при выборе города
     $('.head-location-btn, .close-loc-modal').on('click', function (e) {
         e.preventDefault();
         $(this).toggleClass('active');
+    });
+
+    // article page mob Содержание-btn
+    $('.article-mob-btn').on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.article-content-items').toggleClass('active');
+    });
+
+    // fixed message menu
+    $('.fixed-message-btn').on('click', function () {
+        $('.fixed-message-menu').toggleClass('active');
     });
 
 
@@ -100,8 +126,9 @@ $(function () {
             prevEl: ".swiper-button-prev",
         },
         breakpoints: {
-            640: {
-                slidesPerView: 1,
+            320: {
+                slidesPerView: 1.4,
+                spaceBetween: 10,
             },
             768: {
                 slidesPerView: 3,

@@ -12,6 +12,15 @@
 	</head>
 	<body>
 		<div class="wrapper">
+			<div class="fixed-message">
+				<span class="fixed-message-btn"><img src="images/icons/fixed-message-icon.png" alt=""></span>
+				<div class="fixed-message-menu">
+					<a href="#!" data-bs-toggle="modal" data-bs-target="#request-modal"><img src="images/icons/tel-icon.svg" alt=""> Заказать звонок</a>
+					<a href="#!" data-bs-toggle="modal" data-bs-target="#callback-modal"><img src="images/icons/pencil-icon.svg" alt=""> Форма обратной связи</a>
+					<a href="#!"><img src="images/icons/message-icon.svg" alt=""> Чат со специалистом</a>
+				</div>
+			</div>
+			
 			<header class="header">
 				<div class="container-fluid top-con">
 					<div class="container">
@@ -306,7 +315,7 @@
 								<span class="icon"><img src="images/icons/favorite-icon.svg" alt=""></span>
 								<span class="text">Избранное</span>
 							</a>
-							<a href="#!" class="basket">
+							<a href="#!" class="basket" data-bs-toggle="modal" data-bs-target="#modal-basket">
 								<span class="icon"><img src="images/icons/cart-icon.svg" alt=""></span>
 								<span class="text">Корзина</span>
 							</a>
@@ -343,97 +352,132 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 side-col">
 								<form action="#!">
 									<div class="subcategory-side">
-										<div class="side-item">
-											<p>Фильтр по параметрам</p>
-											<label class="control control--checkbox">
-												<input type="checkbox">
-												<div class="control__indicator"></div>
-												<span>В наличии</span>
-											</label>
-											<label class="control control--checkbox">
-												<input type="checkbox">
-												<div class="control__indicator"></div>
-												<span>В пути</span>
-											</label>
+										<p class="filter-title">Фильтр по параметрам</p>
+										<div class="mob">
+											<span class="filter-closer-btn">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+													<path d="M1 1L15 15" stroke="#B7B7B7"/>
+													<path d="M15 1L1 15" stroke="#B7B7B7"/>
+												</svg>
+											</span>
+										</div>
+
+										<div class="side-item active">
+											<p class="active">
+												<span>Статус</span>
+												<img src="images/icons/filter-text-arrow.png" alt="">
+											</p>
+											<div class="filter-label">
+												<label class="control control--checkbox">
+													<input type="checkbox">
+													<div class="control__indicator"></div>
+													<span>В наличии</span>
+												</label>
+												<label class="control control--checkbox">
+													<input type="checkbox">
+													<div class="control__indicator"></div>
+													<span>В пути</span>
+												</label>
+											</div>
+										</div>
+	
+										<div class="side-item active">
+											<p class="active">
+												<span>Тип сверла</span>
+												<img src="images/icons/filter-text-arrow.png" alt="">
+											</p>
+											<div class="filter-label">
+												<label class="control control--checkbox">
+													<input type="checkbox">
+													<div class="control__indicator"></div>
+													<span>UD 20</span>
+												</label>
+												<label class="control control--checkbox">
+													<input type="checkbox">
+													<div class="control__indicator"></div>
+													<span>UD 30</span>
+												</label>
+												<label class="control control--checkbox">
+													<input type="checkbox">
+													<div class="control__indicator"></div>
+													<span>UD 40</span>
+												</label>
+											</div>
 										</div>
 	
 										<div class="side-item">
-											<p>Тип сверла</p>
-											<label class="control control--checkbox">
-												<input type="checkbox">
-												<div class="control__indicator"></div>
-												<span>UD 20</span>
-											</label>
-											<label class="control control--checkbox">
-												<input type="checkbox">
-												<div class="control__indicator"></div>
-												<span>UD 30</span>
-											</label>
-											<label class="control control--checkbox">
-												<input type="checkbox">
-												<div class="control__indicator"></div>
-												<span>UD 40</span>
-											</label>
+											<p>
+												<span>Максимальная глубина сверления, мм</span>
+												<img src="images/icons/filter-text-arrow.png" alt="">
+											</p>
+											<div class="filter-label">
+												<label class="control control--checkbox">
+													<input type="checkbox">
+													<div class="control__indicator"></div>
+													<span>156</span>
+												</label>
+												<label class="control control--checkbox">
+													<input type="checkbox">
+													<div class="control__indicator"></div>
+													<span>160</span>
+												</label>
+												<label class="control control--checkbox">
+													<input type="checkbox">
+													<div class="control__indicator"></div>
+													<span>165</span>
+												</label>
+											</div>
 										</div>
 	
 										<div class="side-item">
-											<p>Максимальная глубина сверления, мм</p>
-											<label class="control control--checkbox">
-												<input type="checkbox">
-												<div class="control__indicator"></div>
-												<span>156</span>
-											</label>
-											<label class="control control--checkbox">
-												<input type="checkbox">
-												<div class="control__indicator"></div>
-												<span>160</span>
-											</label>
-											<label class="control control--checkbox">
-												<input type="checkbox">
-												<div class="control__indicator"></div>
-												<span>165</span>
-											</label>
+											<p>
+												<span>Свёрла с механическим креплением пластин</span>
+												<img src="images/icons/filter-text-arrow.png" alt="">
+											</p>
+											<div class="filter-label">
+												<label class="control control--checkbox">
+													<input type="checkbox">
+													<div class="control__indicator"></div>
+													<span>156</span>
+												</label>
+												<label class="control control--checkbox">
+													<input type="checkbox">
+													<div class="control__indicator"></div>
+													<span>160</span>
+												</label>
+												<label class="control control--checkbox">
+													<input type="checkbox">
+													<div class="control__indicator"></div>
+													<span>165</span>
+												</label>
+											</div>
 										</div>
 	
 										<div class="side-item">
-											<p>Свёрла с механическим креплением пластин</p>
-											<label class="control control--checkbox">
-												<input type="checkbox">
-												<div class="control__indicator"></div>
-												<span>156</span>
-											</label>
-											<label class="control control--checkbox">
-												<input type="checkbox">
-												<div class="control__indicator"></div>
-												<span>160</span>
-											</label>
-											<label class="control control--checkbox">
-												<input type="checkbox">
-												<div class="control__indicator"></div>
-												<span>165</span>
-											</label>
-										</div>
-	
-										<div class="side-item">
-											<p>Диаметр сверла, мм</p>
-											<label class="control control--checkbox">
-												<input type="checkbox">
-												<div class="control__indicator"></div>
-												<span>156</span>
-											</label>
-											<label class="control control--checkbox">
-												<input type="checkbox">
-												<div class="control__indicator"></div>
-												<span>160</span>
-											</label>
-											<label class="control control--checkbox">
-												<input type="checkbox">
-												<div class="control__indicator"></div>
-												<span>165</span>
-											</label>
+											<p>
+												<span>Диаметр сверла, мм</span>
+												<img src="images/icons/filter-text-arrow.png" alt="">
+											</p>
+											<div class="filter-label">
+												<label class="control control--checkbox">
+													<input type="checkbox">
+													<div class="control__indicator"></div>
+													<span>156</span>
+												</label>
+												<label class="control control--checkbox">
+													<input type="checkbox">
+													<div class="control__indicator"></div>
+													<span>160</span>
+												</label>
+												<label class="control control--checkbox">
+													<input type="checkbox">
+													<div class="control__indicator"></div>
+													<span>165</span>
+												</label>
+											</div>
 										</div>
 										
 										<div class="subcategory-btn-block">
@@ -497,6 +541,13 @@
 										</div>
 									</div>
 
+									<div class="mob">
+										<button type="button" class="mob-filter-btn">
+											<img src="images/icons/filter-icon.svg" alt="">
+											<span>Фильтр по параметрам</span>
+										</button>
+									</div>
+
 									<div class="subcat-table">
 										<div class="subcat-top">
 											<div class="subcat-col one">Наименование</div>
@@ -512,19 +563,28 @@
 												<p>Корпусное сверло UD20 для сменных пластин, диаметр 12.5 мм</p>
 											</div>
 											<div class="subcat-item two vendor-code">
+												<span class="mob-text">Артикул</span>
 												<span>UD20</span>
 											</div>
 											<div class="subcat-item three size-mm">
+												<span class="mob-text">Макс. глубина сверления, мм <span class="line"></span></span>
 												<span>26</span>
 											</div>
 											<div class="subcat-item four plate-type">
+												<span class="mob-text">Тип пластины <span class="line"></span></span>
 												<span>306992</span>
 											</div>
 											<div class="subcat-item five price">
+												<span class="mob-text">Цена(с НДС) <span class="line"></span></span>
 												<span>10 412 руб.</span>
 											</div>
 											<div class="subcat-item six stock">
-												<span class="stock-status">В наличии</span>
+												<span class="stock-status">
+													<p>3 402 000 ₽</p>
+													<span class="current-price">1 868 000 ₽ </span>
+													<span class="status-text">В наличии</span>
+												</span>
+
 												<div class="subcat-stock-in">
 													<button type="button" class="stock-cart">В корзину</button>
 	
@@ -544,26 +604,42 @@
 													</div>
 												</div>
 											</div>
-										</div>
 
+											<div class="mob">
+												<button class="subcat-arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+														<path d="M9 5L5 1L1 5" stroke="white"/>
+													</svg>
+												</button>
+											</div>
+										</div>
 										<div class="subcat-body">
 											<div class="subcat-item one name">
 												<p>Корпусное сверло UD20 для сменных пластин, диаметр 12.5 мм</p>
 											</div>
 											<div class="subcat-item two vendor-code">
+												<span class="mob-text">Артикул</span>
 												<span>UD20</span>
 											</div>
 											<div class="subcat-item three size-mm">
+												<span class="mob-text">Макс. глубина сверления, мм <span class="line"></span></span>
 												<span>26</span>
 											</div>
 											<div class="subcat-item four plate-type">
+												<span class="mob-text">Тип пластины <span class="line"></span></span>
 												<span>306992</span>
 											</div>
 											<div class="subcat-item five price">
+												<span class="mob-text">Цена(с НДС) <span class="line"></span></span>
 												<span>10 412 руб.</span>
 											</div>
 											<div class="subcat-item six stock">
-												<span class="stock-status">Под заказ</span>
+												<span class="stock-status">
+													<p>3 402 000 ₽</p>
+													<span class="current-price">1 868 000 ₽ </span>
+													<span class="status-text to-order">Под заказ</span>
+												</span>
+
 												<div class="subcat-stock-in">
 													<button type="button" class="stock-cart">В корзину</button>
 	
@@ -583,26 +659,42 @@
 													</div>
 												</div>
 											</div>
-										</div>
 
+											<div class="mob">
+												<button class="subcat-arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+														<path d="M9 5L5 1L1 5" stroke="white"/>
+													</svg>
+												</button>
+											</div>
+										</div>
 										<div class="subcat-body">
 											<div class="subcat-item one name">
 												<p>Корпусное сверло UD20 для сменных пластин, диаметр 12.5 мм</p>
 											</div>
 											<div class="subcat-item two vendor-code">
+												<span class="mob-text">Артикул</span>
 												<span>UD20</span>
 											</div>
 											<div class="subcat-item three size-mm">
+												<span class="mob-text">Макс. глубина сверления, мм <span class="line"></span></span>
 												<span>26</span>
 											</div>
 											<div class="subcat-item four plate-type">
+												<span class="mob-text">Тип пластины <span class="line"></span></span>
 												<span>306992</span>
 											</div>
 											<div class="subcat-item five price">
+												<span class="mob-text">Цена(с НДС) <span class="line"></span></span>
 												<span>10 412 руб.</span>
 											</div>
 											<div class="subcat-item six stock">
-												<span class="stock-status">В наличии</span>
+												<span class="stock-status">
+													<p>3 402 000 ₽</p>
+													<span class="current-price">1 868 000 ₽ </span>
+													<span class="status-text">В наличии</span>
+												</span>
+
 												<div class="subcat-stock-in">
 													<button type="button" class="stock-cart">В корзину</button>
 	
@@ -622,26 +714,42 @@
 													</div>
 												</div>
 											</div>
-										</div>
 
+											<div class="mob">
+												<button class="subcat-arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+														<path d="M9 5L5 1L1 5" stroke="white"/>
+													</svg>
+												</button>
+											</div>
+										</div>
 										<div class="subcat-body">
 											<div class="subcat-item one name">
 												<p>Корпусное сверло UD20 для сменных пластин, диаметр 12.5 мм</p>
 											</div>
 											<div class="subcat-item two vendor-code">
+												<span class="mob-text">Артикул</span>
 												<span>UD20</span>
 											</div>
 											<div class="subcat-item three size-mm">
+												<span class="mob-text">Макс. глубина сверления, мм <span class="line"></span></span>
 												<span>26</span>
 											</div>
 											<div class="subcat-item four plate-type">
+												<span class="mob-text">Тип пластины <span class="line"></span></span>
 												<span>306992</span>
 											</div>
 											<div class="subcat-item five price">
+												<span class="mob-text">Цена(с НДС) <span class="line"></span></span>
 												<span>10 412 руб.</span>
 											</div>
 											<div class="subcat-item six stock">
-												<span class="stock-status">Под заказ</span>
+												<span class="stock-status">
+													<p>3 402 000 ₽</p>
+													<span class="current-price">1 868 000 ₽ </span>
+													<span class="status-text to-order">Под заказ</span>
+												</span>
+
 												<div class="subcat-stock-in">
 													<button type="button" class="stock-cart">В корзину</button>
 	
@@ -661,26 +769,44 @@
 													</div>
 												</div>
 											</div>
+
+											<div class="mob">
+												<button class="subcat-arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+														<path d="M9 5L5 1L1 5" stroke="white"/>
+													</svg>
+												</button>
+											</div>
 										</div>
 
-										<div class="subcat-body">
+
+										<div class="subcat-body pc">
 											<div class="subcat-item one name">
 												<p>Корпусное сверло UD20 для сменных пластин, диаметр 12.5 мм</p>
 											</div>
 											<div class="subcat-item two vendor-code">
+												<span class="mob-text">Артикул</span>
 												<span>UD20</span>
 											</div>
 											<div class="subcat-item three size-mm">
+												<span class="mob-text">Макс. глубина сверления, мм <span class="line"></span></span>
 												<span>26</span>
 											</div>
 											<div class="subcat-item four plate-type">
+												<span class="mob-text">Тип пластины <span class="line"></span></span>
 												<span>306992</span>
 											</div>
 											<div class="subcat-item five price">
+												<span class="mob-text">Цена(с НДС) <span class="line"></span></span>
 												<span>10 412 руб.</span>
 											</div>
 											<div class="subcat-item six stock">
-												<span class="stock-status">Под заказ</span>
+												<span class="stock-status">
+													<p>3 402 000 ₽</p>
+													<span class="current-price">1 868 000 ₽ </span>
+													<span class="status-text">В наличии</span>
+												</span>
+
 												<div class="subcat-stock-in">
 													<button type="button" class="stock-cart">В корзину</button>
 	
@@ -700,26 +826,42 @@
 													</div>
 												</div>
 											</div>
-										</div>
 
-										<div class="subcat-body">
+											<div class="mob">
+												<button class="subcat-arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+														<path d="M9 5L5 1L1 5" stroke="white"/>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="subcat-body pc">
 											<div class="subcat-item one name">
 												<p>Корпусное сверло UD20 для сменных пластин, диаметр 12.5 мм</p>
 											</div>
 											<div class="subcat-item two vendor-code">
+												<span class="mob-text">Артикул</span>
 												<span>UD20</span>
 											</div>
 											<div class="subcat-item three size-mm">
+												<span class="mob-text">Макс. глубина сверления, мм <span class="line"></span></span>
 												<span>26</span>
 											</div>
 											<div class="subcat-item four plate-type">
+												<span class="mob-text">Тип пластины <span class="line"></span></span>
 												<span>306992</span>
 											</div>
 											<div class="subcat-item five price">
+												<span class="mob-text">Цена(с НДС) <span class="line"></span></span>
 												<span>10 412 руб.</span>
 											</div>
 											<div class="subcat-item six stock">
-												<span class="stock-status">В наличии</span>
+												<span class="stock-status">
+													<p>3 402 000 ₽</p>
+													<span class="current-price">1 868 000 ₽ </span>
+													<span class="status-text to-order">Под заказ</span>
+												</span>
+
 												<div class="subcat-stock-in">
 													<button type="button" class="stock-cart">В корзину</button>
 	
@@ -739,26 +881,42 @@
 													</div>
 												</div>
 											</div>
-										</div>
 
-										<div class="subcat-body">
+											<div class="mob">
+												<button class="subcat-arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+														<path d="M9 5L5 1L1 5" stroke="white"/>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="subcat-body pc">
 											<div class="subcat-item one name">
 												<p>Корпусное сверло UD20 для сменных пластин, диаметр 12.5 мм</p>
 											</div>
 											<div class="subcat-item two vendor-code">
+												<span class="mob-text">Артикул</span>
 												<span>UD20</span>
 											</div>
 											<div class="subcat-item three size-mm">
+												<span class="mob-text">Макс. глубина сверления, мм <span class="line"></span></span>
 												<span>26</span>
 											</div>
 											<div class="subcat-item four plate-type">
+												<span class="mob-text">Тип пластины <span class="line"></span></span>
 												<span>306992</span>
 											</div>
 											<div class="subcat-item five price">
+												<span class="mob-text">Цена(с НДС) <span class="line"></span></span>
 												<span>10 412 руб.</span>
 											</div>
 											<div class="subcat-item six stock">
-												<span class="stock-status">Под заказ</span>
+												<span class="stock-status">
+													<p>3 402 000 ₽</p>
+													<span class="current-price">1 868 000 ₽ </span>
+													<span class="status-text">В наличии</span>
+												</span>
+
 												<div class="subcat-stock-in">
 													<button type="button" class="stock-cart">В корзину</button>
 	
@@ -778,26 +936,42 @@
 													</div>
 												</div>
 											</div>
-										</div>
 
-										<div class="subcat-body">
+											<div class="mob">
+												<button class="subcat-arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+														<path d="M9 5L5 1L1 5" stroke="white"/>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="subcat-body pc">
 											<div class="subcat-item one name">
 												<p>Корпусное сверло UD20 для сменных пластин, диаметр 12.5 мм</p>
 											</div>
 											<div class="subcat-item two vendor-code">
+												<span class="mob-text">Артикул</span>
 												<span>UD20</span>
 											</div>
 											<div class="subcat-item three size-mm">
+												<span class="mob-text">Макс. глубина сверления, мм <span class="line"></span></span>
 												<span>26</span>
 											</div>
 											<div class="subcat-item four plate-type">
+												<span class="mob-text">Тип пластины <span class="line"></span></span>
 												<span>306992</span>
 											</div>
 											<div class="subcat-item five price">
+												<span class="mob-text">Цена(с НДС) <span class="line"></span></span>
 												<span>10 412 руб.</span>
 											</div>
 											<div class="subcat-item six stock">
-												<span class="stock-status">Под заказ</span>
+												<span class="stock-status">
+													<p>3 402 000 ₽</p>
+													<span class="current-price">1 868 000 ₽ </span>
+													<span class="status-text to-order">Под заказ</span>
+												</span>
+
 												<div class="subcat-stock-in">
 													<button type="button" class="stock-cart">В корзину</button>
 	
@@ -817,26 +991,42 @@
 													</div>
 												</div>
 											</div>
-										</div>
 
-										<div class="subcat-body">
+											<div class="mob">
+												<button class="subcat-arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+														<path d="M9 5L5 1L1 5" stroke="white"/>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="subcat-body pc">
 											<div class="subcat-item one name">
 												<p>Корпусное сверло UD20 для сменных пластин, диаметр 12.5 мм</p>
 											</div>
 											<div class="subcat-item two vendor-code">
+												<span class="mob-text">Артикул</span>
 												<span>UD20</span>
 											</div>
 											<div class="subcat-item three size-mm">
+												<span class="mob-text">Макс. глубина сверления, мм <span class="line"></span></span>
 												<span>26</span>
 											</div>
 											<div class="subcat-item four plate-type">
+												<span class="mob-text">Тип пластины <span class="line"></span></span>
 												<span>306992</span>
 											</div>
 											<div class="subcat-item five price">
+												<span class="mob-text">Цена(с НДС) <span class="line"></span></span>
 												<span>10 412 руб.</span>
 											</div>
 											<div class="subcat-item six stock">
-												<span class="stock-status">В наличии</span>
+												<span class="stock-status">
+													<p>3 402 000 ₽</p>
+													<span class="current-price">1 868 000 ₽ </span>
+													<span class="status-text">В наличии</span>
+												</span>
+
 												<div class="subcat-stock-in">
 													<button type="button" class="stock-cart">В корзину</button>
 	
@@ -855,6 +1045,179 @@
 														</button>
 													</div>
 												</div>
+											</div>
+
+											<div class="mob">
+												<button class="subcat-arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+														<path d="M9 5L5 1L1 5" stroke="white"/>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="subcat-body pc">
+											<div class="subcat-item one name">
+												<p>Корпусное сверло UD20 для сменных пластин, диаметр 12.5 мм</p>
+											</div>
+											<div class="subcat-item two vendor-code">
+												<span class="mob-text">Артикул</span>
+												<span>UD20</span>
+											</div>
+											<div class="subcat-item three size-mm">
+												<span class="mob-text">Макс. глубина сверления, мм <span class="line"></span></span>
+												<span>26</span>
+											</div>
+											<div class="subcat-item four plate-type">
+												<span class="mob-text">Тип пластины <span class="line"></span></span>
+												<span>306992</span>
+											</div>
+											<div class="subcat-item five price">
+												<span class="mob-text">Цена(с НДС) <span class="line"></span></span>
+												<span>10 412 руб.</span>
+											</div>
+											<div class="subcat-item six stock">
+												<span class="stock-status">
+													<p>3 402 000 ₽</p>
+													<span class="current-price">1 868 000 ₽ </span>
+													<span class="status-text to-order">Под заказ</span>
+												</span>
+
+												<div class="subcat-stock-in">
+													<button type="button" class="stock-cart">В корзину</button>
+	
+													<div class="subcat-count">
+														<button type="button" class="minus">
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+																<path d="M0 1H12" stroke="#424242"/>
+															</svg>
+														</button>
+														<input type="number" value="1">
+														<button type="button" class="plus">
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M0 6H12" stroke="#424242"/>
+																<path d="M6 12L6 -3.57628e-07" stroke="#424242"/>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+
+											<div class="mob">
+												<button class="subcat-arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+														<path d="M9 5L5 1L1 5" stroke="white"/>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="subcat-body pc">
+											<div class="subcat-item one name">
+												<p>Корпусное сверло UD20 для сменных пластин, диаметр 12.5 мм</p>
+											</div>
+											<div class="subcat-item two vendor-code">
+												<span class="mob-text">Артикул</span>
+												<span>UD20</span>
+											</div>
+											<div class="subcat-item three size-mm">
+												<span class="mob-text">Макс. глубина сверления, мм <span class="line"></span></span>
+												<span>26</span>
+											</div>
+											<div class="subcat-item four plate-type">
+												<span class="mob-text">Тип пластины <span class="line"></span></span>
+												<span>306992</span>
+											</div>
+											<div class="subcat-item five price">
+												<span class="mob-text">Цена(с НДС) <span class="line"></span></span>
+												<span>10 412 руб.</span>
+											</div>
+											<div class="subcat-item six stock">
+												<span class="stock-status">
+													<p>3 402 000 ₽</p>
+													<span class="current-price">1 868 000 ₽ </span>
+													<span class="status-text">В наличии</span>
+												</span>
+
+												<div class="subcat-stock-in">
+													<button type="button" class="stock-cart">В корзину</button>
+	
+													<div class="subcat-count">
+														<button type="button" class="minus">
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+																<path d="M0 1H12" stroke="#424242"/>
+															</svg>
+														</button>
+														<input type="number" value="1">
+														<button type="button" class="plus">
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M0 6H12" stroke="#424242"/>
+																<path d="M6 12L6 -3.57628e-07" stroke="#424242"/>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+
+											<div class="mob">
+												<button class="subcat-arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+														<path d="M9 5L5 1L1 5" stroke="white"/>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="subcat-body pc">
+											<div class="subcat-item one name">
+												<p>Корпусное сверло UD20 для сменных пластин, диаметр 12.5 мм</p>
+											</div>
+											<div class="subcat-item two vendor-code">
+												<span class="mob-text">Артикул</span>
+												<span>UD20</span>
+											</div>
+											<div class="subcat-item three size-mm">
+												<span class="mob-text">Макс. глубина сверления, мм <span class="line"></span></span>
+												<span>26</span>
+											</div>
+											<div class="subcat-item four plate-type">
+												<span class="mob-text">Тип пластины <span class="line"></span></span>
+												<span>306992</span>
+											</div>
+											<div class="subcat-item five price">
+												<span class="mob-text">Цена(с НДС) <span class="line"></span></span>
+												<span>10 412 руб.</span>
+											</div>
+											<div class="subcat-item six stock">
+												<span class="stock-status">
+													<p>3 402 000 ₽</p>
+													<span class="current-price">1 868 000 ₽ </span>
+													<span class="status-text to-order">Под заказ</span>
+												</span>
+
+												<div class="subcat-stock-in">
+													<button type="button" class="stock-cart">В корзину</button>
+	
+													<div class="subcat-count">
+														<button type="button" class="minus">
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+																<path d="M0 1H12" stroke="#424242"/>
+															</svg>
+														</button>
+														<input type="number" value="1">
+														<button type="button" class="plus">
+															<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+																<path d="M0 6H12" stroke="#424242"/>
+																<path d="M6 12L6 -3.57628e-07" stroke="#424242"/>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+
+											<div class="mob">
+												<button class="subcat-arrow">
+													<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+														<path d="M9 5L5 1L1 5" stroke="white"/>
+													</svg>
+												</button>
 											</div>
 										</div>
 									</div>
@@ -868,7 +1231,7 @@
 															<path d="M0.646446 3.64645C0.451183 3.84171 0.451183 4.15829 0.646446 4.35355L3.82843 7.53554C4.02369 7.7308 4.34027 7.7308 4.53553 7.53554C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976312 4.7308 0.65973 4.53553 0.464467C4.34027 0.269205 4.02369 0.269205 3.82843 0.464467L0.646446 3.64645ZM19 3.5L1 3.5L1 4.5L19 4.5L19 3.5Z" fill="black"/>
 														</svg>
 													</span>
-													Вперед
+													<span class="text">Назад</span>
 												</a>
 											</li>
 											<li class="page-item"><a class="page-link active" href="#">1</a></li>
@@ -882,7 +1245,7 @@
 											<li class="page-item"><a class="page-link" href="#">9</a></li>
 											<li class="page-item next">
 												<a class="page-link" href="#" aria-label="Next">
-													Вперед
+													<span class="text">Вперед</span>
 													<span aria-hidden="true">
 														<svg xmlns="http://www.w3.org/2000/svg" width="19" height="8" viewBox="0 0 19 8" fill="none">
 															<path d="M18.3536 4.35355C18.5488 4.15829 18.5488 3.84171 18.3536 3.64645L15.1716 0.464466C14.9763 0.269204 14.6597 0.269204 14.4645 0.464466C14.2692 0.659728 14.2692 0.976311 14.4645 1.17157L17.2929 4L14.4645 6.82843C14.2692 7.02369 14.2692 7.34027 14.4645 7.53553C14.6597 7.7308 14.9763 7.7308 15.1716 7.53553L18.3536 4.35355ZM0 4.5H18V3.5H0V4.5Z" fill="black"/>
@@ -1015,7 +1378,7 @@
 									<a href="tel:9 (999) 999-99-99">9 (999) 999-99-99</a>
 									<span>с 10:00 до 19:00</span>
 								</div>
-								<a href="#!" class="ftr-contact-call">
+								<a href="#!" class="ftr-contact-call" data-bs-toggle="modal" data-bs-target="#request-call">
 									<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<circle cx="17.5" cy="17.5" r="17" stroke="white"/>
 										<path d="M18.9235 17.9223C17.7359 19.1089 16.3599 20.2446 15.816 19.7007C15.038 18.9229 14.5579 18.2448 12.8413 19.6242C11.1255 21.0029 12.4437 21.9225 13.1977 22.6756C14.068 23.5457 17.312 22.7221 20.5185 19.517C23.7243 16.3111 24.5458 13.0677 23.6748 12.1976C22.9208 11.4431 22.0055 10.1259 20.6265 11.8413C19.2469 13.5568 19.9243 14.0368 20.7038 14.8154C21.2455 15.3592 20.1104 16.7349 18.9235 17.9223Z" fill="white"/>
@@ -1208,6 +1571,471 @@
 										<img src="images/icons/location-icon.svg" alt="">
 										<span>Екатеринбург</span>
 									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Заказать звонок Modal -->
+		<div class="modal fade form-modal" id="request-modal" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Заказать звонок</h5>
+						<p>Заполните поля и наш менеджер свяжется с вами.</p>
+						<button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+								<path d="M1 1L25 25" stroke="#4F4F4F" stroke-width="2"/>
+								<path d="M25 1L1 25" stroke="#4F4F4F" stroke-width="2"/>
+							</svg>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form action="#!">
+							<div class="request-call">
+								<div class="form-group">
+									<span>Имя*</span>
+									<input type="text" name="name" placeholder="Иван Петр" required>
+								</div>
+								<div class="form-group">
+									<span>Телефон*</span>
+									<input type="tel" name="phone" placeholder="+7 (999) 932-32-32" required>
+								</div>
+
+								<div class="request-button">
+									<button type="submit" class="request-btn">Отправить</button>
+									<p>Отправляя заявку, я соглашаюсь на обработку моей персональной информации на условиях, определенных Политикой конфиденциальности.</p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Форма обратной связи Modal -->
+		<div class="modal fade form-modal callback-modal" id="callback-modal" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Форма обратной связи</h5>
+						<p>Напишите сообщение и мы ответим вам на почту. </p>
+						<button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+								<path d="M1 1L25 25" stroke="#4F4F4F" stroke-width="2"/>
+								<path d="M25 1L1 25" stroke="#4F4F4F" stroke-width="2"/>
+							</svg>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form action="#!">
+							<div class="request-call">
+								<div class="form-group">
+									<span>Имя*</span>
+									<input type="text" name="name" placeholder="Иван Петр" required>
+								</div>
+								<div class="form-group">
+									<span>Телефон*</span>
+									<input type="tel" name="phone" placeholder="+7 (999) 932-32-32" required>
+								</div>
+								<div class="form-group">
+									<span>Ваше сообщение</span>
+									<textarea name="message" placeholder="Комментарий"></textarea>
+								</div>
+
+								<div class="request-button">
+									<button type="submit" class="request-btn">Отправить</button>
+									<p>Отправляя заявку, я соглашаюсь на обработку моей персональной информации на условиях, определенных Политикой конфиденциальности.</p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Форма обратной связи Modal -->
+		<div class="modal fade thanks-modal" id="modal-thanks" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+								<path d="M1 1L25 25" stroke="#4F4F4F" stroke-width="2"/>
+								<path d="M25 1L1 25" stroke="#4F4F4F" stroke-width="2"/>
+							</svg>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="thanks-block">
+							<p>Спасибо за заявку, наш менеджер свяжется с вами в ближайшее время</p>
+							<img src="images/icons/thanks-icon.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Заказать звонок for all page modal -->
+		<div class="modal fade form-modal for-all-page" id="request-call" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Заказать звонок</h5>
+						<button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+								<path d="M1 1L25 25" stroke="#4F4F4F" stroke-width="2"/>
+								<path d="M25 1L1 25" stroke="#4F4F4F" stroke-width="2"/>
+							</svg>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form action="#!">
+							<div class="request-call">
+								<div class="form-group">
+									<span>Имя*</span>
+									<input type="text" name="name" placeholder="Иван Петр" required>
+								</div>
+								<div class="form-group">
+									<span>Телефон*</span>
+									<input type="tel" name="phone" placeholder="+7 (999) 932-32-32" required>
+								</div>
+
+								<div class="request-button">
+									<button type="submit" class="request-btn">Отправить</button>
+									<p>Отправляя заявку, я соглашаюсь на обработку моей персональной информации на условиях, определенных Политикой конфиденциальности.</p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Напишите нам Modal -->
+		<div class="modal fade form-modal write-modal for-all-page" id="write-modal" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Напишите нам</h5>
+						<button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+								<path d="M1 1L25 25" stroke="#4F4F4F" stroke-width="2"/>
+								<path d="M25 1L1 25" stroke="#4F4F4F" stroke-width="2"/>
+							</svg>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form action="#!">
+							<div class="request-call">
+								<div class="form-group">
+									<span>Имя*</span>
+									<input type="text" name="name" placeholder="Иван Петр" required>
+								</div>
+								<div class="form-group">
+									<span>Телефон*</span>
+									<input type="tel" name="phone" placeholder="+7 (999) 932-32-32" required>
+								</div>
+								<div class="form-group">
+									<span>Ваше сообщение</span>
+									<textarea name="message" placeholder="Комментарий"></textarea>
+								</div>
+
+								<div class="request-button">
+									<button type="submit" class="request-btn">Отправить</button>
+									<p>Отправляя заявку, я соглашаюсь на обработку моей персональной информации на условиях, определенных Политикой конфиденциальности.</p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Корзина Modal -->
+		<div class="modal fade basket-modal" id="modal-basket" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+								<path d="M1 1L25 25" stroke="#4F4F4F" stroke-width="2"/>
+								<path d="M25 1L1 25" stroke="#4F4F4F" stroke-width="2"/>
+							</svg>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="basket-modal-title">
+							<p>Товар добавлен в корзину</p>
+						</div>
+
+						<div class="basket-block">
+							<div class="basket-in">
+								<div class="basket-img">
+									<img src="images/basket-img.png" alt="">
+								</div>
+								<div class="basket-text-top">
+									<p class="b-name">Наименование</p>
+									<span class="b-code">Артикул</span>
+								</div>
+							</div>
+
+							<div class="basket-text">
+								<div class="basket-bottom">
+									<div class="b-price">
+										<span>3 402 000 ₽</span>
+										<p>1 868 000 ₽ </p>
+									</div>
+									<div class="subcat-count">
+										<button type="button" class="minus">
+											<svg xmlns="http://www.w3.org/2000/svg" width="12" height="2" viewBox="0 0 12 2" fill="none">
+												<path d="M0 1H12" stroke="#424242"></path>
+											</svg>
+										</button>
+										<input type="number" value="1">
+										<button type="button" class="plus">
+											<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+												<path d="M0 6H12" stroke="#424242"></path>
+												<path d="M6 12L6 -3.57628e-07" stroke="#424242"></path>
+											</svg>
+										</button>
+									</div>
+									<div class="b-price count-price">
+										<span>3 402 000 ₽</span>
+										<p>1 868 000 ₽ </p>
+									</div>
+								</div>
+							</div>
+
+							<button type="button" class="basket-delete">
+								<span class="pc">удалить</span>
+								<img src="images/icons/basket-delete-icon.svg" alt="" class="pc">
+								<span class="mob"><img src="images/icons/basket-trash-icon.svg" alt=""></span>
+							</button>
+						</div>
+
+						<div class="basket-modal-btns">
+							<a href="#!" class="gray-btn">Продолжить покупку</a>
+							<a href="#!" class="blue-btn">Быстрый заказ</a>
+						</div>
+
+						<div class="basket-products">
+							<div class="basket-pro-title">
+								<p>Вместе с этим покупают</p>
+							</div>
+
+							<div class="row basket-pro-in">
+								<div class="col-lg-4 col-md-4">
+									<div class="xit-block">
+                                        <div class="xit-top">
+                                            <div class="xit-mark">Хит</div>
+                                            <div class="xit-img">
+                                                <img src="images/xit-img.png" alt="">
+                                            </div>
+                                        </div>
+    
+                                        <div class="xit-body">
+                                            <div class="xit-rating">
+                                                <div class="rating-star">
+                                                    <img src="images/icons/xit-star-icon.svg" alt="">
+                                                </div>
+                                                <span>5.0</span>
+                                            </div>
+                                            <div class="xit-text">
+                                                <p>Осевой твердосплавный инструмент</p>
+                                            </div>
+                                            <div class="xit-info-block">
+                                                <div class="xit-info">
+                                                    <p>Диаметр</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">12</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                            </div>
+                                            <div class="xit-price">
+                                                <span>500 ₽</span>
+                                            </div>
+                                            <div class="xit-stock">
+                                                <span class="stock-status"></span>
+                                                <p>В наличии</p>
+                                            </div>
+                                            <div class="xit-btns">
+												<button class="xit-add-cart">В корзину</button>
+												<a href="#!" class="xit-link">
+													<span class="text">Подробнее</span>
+													<span class="mob icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+															<g clip-path="url(#clip0_682_1678)">
+															  <path d="M15.1247 2.75C13.5297 2.75 11.9988 3.4925 10.9997 4.66583C10.0005 3.4925 8.46967 2.75 6.87467 2.75C4.05134 2.75 1.83301 4.96833 1.83301 7.79167C1.83301 11.2567 4.94967 14.08 9.67051 18.37L10.9997 19.5708L12.3288 18.3608C17.0497 14.08 20.1663 11.2567 20.1663 7.79167C20.1663 4.96833 17.948 2.75 15.1247 2.75ZM11.0913 17.0042L10.9997 17.0958L10.908 17.0042C6.54467 13.0533 3.66634 10.4408 3.66634 7.79167C3.66634 5.95833 5.04134 4.58333 6.87467 4.58333C8.28634 4.58333 9.66134 5.49083 10.1472 6.74667H11.8613C12.338 5.49083 13.713 4.58333 15.1247 4.58333C16.958 4.58333 18.333 5.95833 18.333 7.79167C18.333 10.4408 15.4547 13.0533 11.0913 17.0042Z" fill="#929292"/>
+															</g>
+															<defs>
+															  <clipPath id="clip0_682_1678">
+																<rect width="22" height="22" fill="white"/>
+															  </clipPath>
+															</defs>
+														  </svg>
+													</span>
+												</a>
+											</div>
+                                        </div>
+                                    </div>
+								</div>
+
+								<div class="col-lg-4 col-md-4">
+									<div class="xit-block">
+                                        <div class="xit-top">
+                                            <div class="xit-mark">Хит</div>
+                                            <div class="xit-img">
+                                                <img src="images/xit-img.png" alt="">
+                                            </div>
+                                        </div>
+    
+                                        <div class="xit-body">
+                                            <div class="xit-rating">
+                                                <div class="rating-star">
+                                                    <img src="images/icons/xit-star-icon.svg" alt="">
+                                                </div>
+                                                <span>5.0</span>
+                                            </div>
+                                            <div class="xit-text">
+                                                <p>Осевой твердосплавный инструмент</p>
+                                            </div>
+                                            <div class="xit-info-block">
+                                                <div class="xit-info">
+                                                    <p>Диаметр</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">12</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                            </div>
+                                            <div class="xit-price">
+                                                <span>500 ₽</span>
+                                            </div>
+                                            <div class="xit-stock">
+                                                <span class="stock-status"></span>
+                                                <p>В наличии</p>
+                                            </div>
+                                            <div class="xit-btns">
+												<button class="xit-add-cart">В корзину</button>
+												<a href="#!" class="xit-link">
+													<span class="text">Подробнее</span>
+													<span class="mob icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+															<g clip-path="url(#clip0_682_1678)">
+															  <path d="M15.1247 2.75C13.5297 2.75 11.9988 3.4925 10.9997 4.66583C10.0005 3.4925 8.46967 2.75 6.87467 2.75C4.05134 2.75 1.83301 4.96833 1.83301 7.79167C1.83301 11.2567 4.94967 14.08 9.67051 18.37L10.9997 19.5708L12.3288 18.3608C17.0497 14.08 20.1663 11.2567 20.1663 7.79167C20.1663 4.96833 17.948 2.75 15.1247 2.75ZM11.0913 17.0042L10.9997 17.0958L10.908 17.0042C6.54467 13.0533 3.66634 10.4408 3.66634 7.79167C3.66634 5.95833 5.04134 4.58333 6.87467 4.58333C8.28634 4.58333 9.66134 5.49083 10.1472 6.74667H11.8613C12.338 5.49083 13.713 4.58333 15.1247 4.58333C16.958 4.58333 18.333 5.95833 18.333 7.79167C18.333 10.4408 15.4547 13.0533 11.0913 17.0042Z" fill="#929292"/>
+															</g>
+															<defs>
+															  <clipPath id="clip0_682_1678">
+																<rect width="22" height="22" fill="white"/>
+															  </clipPath>
+															</defs>
+														  </svg>
+													</span>
+												</a>
+											</div>
+                                        </div>
+                                    </div>
+								</div>
+
+								<div class="col-lg-4 col-md-4">
+									<div class="xit-block">
+                                        <div class="xit-top">
+                                            <div class="xit-mark">Хит</div>
+                                            <div class="xit-img">
+                                                <img src="images/xit-img.png" alt="">
+                                            </div>
+                                        </div>
+    
+                                        <div class="xit-body">
+                                            <div class="xit-rating">
+                                                <div class="rating-star">
+                                                    <img src="images/icons/xit-star-icon.svg" alt="">
+                                                </div>
+                                                <span>5.0</span>
+                                            </div>
+                                            <div class="xit-text">
+                                                <p>Осевой твердосплавный инструмент</p>
+                                            </div>
+                                            <div class="xit-info-block">
+                                                <div class="xit-info">
+                                                    <p>Диаметр</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">12</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                                <div class="xit-info">
+                                                    <p>L2</p>
+                                                    <span class="line"></span>
+                                                    <span class="info-num">16 мм</span>
+                                                </div>
+                                            </div>
+                                            <div class="xit-price">
+                                                <span>500 ₽</span>
+                                            </div>
+                                            <div class="xit-stock">
+                                                <span class="stock-status"></span>
+                                                <p>В наличии</p>
+                                            </div>
+                                            <div class="xit-btns">
+												<button class="xit-add-cart">В корзину</button>
+												<a href="#!" class="xit-link">
+													<span class="text">Подробнее</span>
+													<span class="mob icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+															<g clip-path="url(#clip0_682_1678)">
+															  <path d="M15.1247 2.75C13.5297 2.75 11.9988 3.4925 10.9997 4.66583C10.0005 3.4925 8.46967 2.75 6.87467 2.75C4.05134 2.75 1.83301 4.96833 1.83301 7.79167C1.83301 11.2567 4.94967 14.08 9.67051 18.37L10.9997 19.5708L12.3288 18.3608C17.0497 14.08 20.1663 11.2567 20.1663 7.79167C20.1663 4.96833 17.948 2.75 15.1247 2.75ZM11.0913 17.0042L10.9997 17.0958L10.908 17.0042C6.54467 13.0533 3.66634 10.4408 3.66634 7.79167C3.66634 5.95833 5.04134 4.58333 6.87467 4.58333C8.28634 4.58333 9.66134 5.49083 10.1472 6.74667H11.8613C12.338 5.49083 13.713 4.58333 15.1247 4.58333C16.958 4.58333 18.333 5.95833 18.333 7.79167C18.333 10.4408 15.4547 13.0533 11.0913 17.0042Z" fill="#929292"/>
+															</g>
+															<defs>
+															  <clipPath id="clip0_682_1678">
+																<rect width="22" height="22" fill="white"/>
+															  </clipPath>
+															</defs>
+														  </svg>
+													</span>
+												</a>
+											</div>
+                                        </div>
+                                    </div>
 								</div>
 							</div>
 						</div>
