@@ -16,12 +16,36 @@
 				<div class="container-fluid top-con">
 					<div class="container">
 						<div class="header-top">
+							<div class="mob">
+								<a href="#!" class="logo-link">
+									<img src="images/mob-logo.svg" alt="">
+								</a>
+							</div>
+
 							<div class="head-location">
 								<a href="#!" class="head-location-btn">
 									<span class="loc-icon"><img src="images/icons/location-icon.svg" alt=""></span>
 									<span class="loc-text">Екатеринбург</span>
 									<span class="loc-arrow"><img src="images/icons/location-arrow-icon.svg" alt=""></span>
+
+									<div class="head-loc-modal">
+										<span class="close-loc-modal">
+											<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+												<path d="M1 1L11 11" stroke="#4F4F4F"/>
+												<path d="M11 1L1 11" stroke="#4F4F4F"/>
+											</svg>
+										</span>
+
+										<p>Ваш город Екатеринбург?</p>
+										<div class="loc-modal-btns">
+											<button type="button">Да, верно</button>
+											<span data-bs-toggle="modal" data-bs-target="#select-city">Нет, другой</span>
+										</div>
+									</div>
 								</a>
+								<div class="mob mob-tel">
+									<a href="tel:+7 (343) 206-67-57"><img src="images/icons/call-icon.svg" alt=""> +7 (343) 206-67-57</a>
+								</div>
 							</div>
 
 							<div class="head-contact">
@@ -54,10 +78,29 @@
 										<a class="nav-link" href="#!">Контакты</a>
 									</li>
 								</ul>
+
+								<div class="mob">
+									<div class="mob-social">
+										<a href="mailto:umico@list.ru" class="mail-link">umico@list.ru</a>
+										<div class="head-social">
+											<a href="#!" class="head-wt"><img src="images/icons/whatsapp-icon.svg" alt=""></a>
+											<a href="#!" class="head-tg"><img src="images/icons/telegram-icon.svg" alt=""></a>
+										</div>
+									</div>
+
+									<button class="mob-menu-closer">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+											<path d="M1 1L23 23" stroke="#fff" stroke-width="2"/>
+											<path d="M23 1L1 23" stroke="#fff" stroke-width="2"/>
+										</svg>
+									</button>
+								</div>
+								
 							</nav>
 						</div>
 					</div>
 				</div>
+
 				<div class="container">
 					<div class="head-block">
 						<div class="head-logo">
@@ -68,8 +111,168 @@
 						</div>
 
 						<div class="head-catalog">
-							<button class="catalog-btn">
-								<span class="text">Каталог</span>
+							<div class="catalog-content">
+								<button class="catalog-btn catalog-opener pc">
+									<span class="text">Каталог</span>
+									<span class="catalog-arrow">
+										<span class="one"></span>
+										<span class="two"></span>
+										<span class="three"></span>
+									</span>
+								</button>
+								
+								<div class="nav--vertical">
+									<div class="catalog-left-menu">
+										<a href="#!" class="cat-left-link">
+											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+											<span class="text">Корпусные сверла</span>
+										</a>
+										<a href="#!" class="cat-left-link">
+											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+											<span class="text">Корпусные сверла</span>
+										</a>
+										<a href="#!" class="cat-left-link">
+											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+											<span class="text">Микрорезцы</span>
+										</a>
+										<a href="#!" class="cat-left-link">
+											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+											<span class="text">Оснастка для токарных автоматов</span>
+										</a>
+										<a href="#!" class="cat-left-link">
+											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+											<span class="text">Осевой твердосплавный инструмент</span>
+										</a>
+										<a href="#!" class="cat-left-link">
+											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+											<span class="text">Сверлильный инструмент</span>
+										</a>
+										<a href="#!" class="cat-left-link">
+											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+											<span class="text">Фрезерный инструмент</span>
+										</a>
+										<a href="#!" class="cat-left-link">
+											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+											<span class="text">Токарный инструмент</span>
+										</a>
+										<a href="#!" class="cat-left-link">
+											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+											<span class="text">Корпусные сверла</span>
+										</a>
+										<a href="#!" class="cat-left-link">
+											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+											<span class="text">Корпусные сверла</span>
+										</a>
+									</div>
+
+									<div class="menu-block">
+										<div class="menu-in">
+											<div class="menu-in-items">
+												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+
+												<div class="menu-subcategory">
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+												</div>
+											</div>
+											<div class="menu-in-items">
+												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+
+												<div class="menu-subcategory">
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+												</div>
+											</div>
+											<div class="menu-in-items">
+												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+
+												<div class="menu-subcategory">
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+												</div>
+											</div>
+											<div class="menu-in-items">
+												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+
+												<div class="menu-subcategory">
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+												</div>
+											</div>
+										</div>
+
+										<div class="menu-in">
+											<div class="menu-in-items">
+												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+
+												<div class="menu-subcategory">
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+												</div>
+											</div>
+											<div class="menu-in-items">
+												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+
+												<div class="menu-subcategory">
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+												</div>
+											</div>
+											<div class="menu-in-items">
+												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+
+												<div class="menu-subcategory">
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+												</div>
+											</div>
+											<div class="menu-in-items">
+												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+
+												<div class="menu-subcategory">
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+													<a href="#!">Содержание подкатегории</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<button class="catalog-btn menu-opener mob">
 								<span class="catalog-arrow">
 									<span class="one"></span>
 									<span class="two"></span>
@@ -86,19 +289,24 @@
 						</div>
 
 						<div class="head-menu">
+							<div class="mob">
+								<button class="catalog-btn catalog-opener">
+									<span class="text">Каталог</span>
+								</button>
+							</div>
 							<a href="#!" class="login">
 								<span class="icon"><img src="images/icons/user-icon.svg" alt=""></span>
 								<span class="text">Войти</span>
 							</a>
-							<a href="#!" class="login">
+							<a href="#!" class="status">
 								<span class="icon"><img src="images/icons/clock-icon.svg" alt=""></span>
 								<span class="text">Статус заказа</span>
 							</a>
-							<a href="#!" class="login">
+							<a href="#!" class="favorite">
 								<span class="icon"><img src="images/icons/favorite-icon.svg" alt=""></span>
 								<span class="text">Избранное</span>
 							</a>
-							<a href="#!" class="login">
+							<a href="#!" class="basket">
 								<span class="icon"><img src="images/icons/cart-icon.svg" alt=""></span>
 								<span class="text">Корзина</span>
 							</a>
@@ -597,7 +805,7 @@
 							</div>
 
 							<div class="col-lg-3">
-								<div class="ftr-menu">
+								<div class="ftr-menu pc">
 									<a href="#!" class="ftr-menu-link">Личный кабинет</a>
 									<a href="#!" class="ftr-menu-link">Вход/Регистрация</a>
 									<a href="#!" class="ftr-menu-link">Мои заказы</a>
@@ -606,12 +814,12 @@
 							</div>
 							<div class="col-lg-3">
 								<div class="ftr-menu">
-									<a href="#!" class="ftr-menu-link">Каталог</a>
-									<a href="#!" class="ftr-menu-link">Категория 1</a>
-									<a href="#!" class="ftr-menu-link">Категория 2</a>
-									<a href="#!" class="ftr-menu-link">Категория 2</a>
-									<a href="#!" class="ftr-menu-link">Категория 2</a>
-									<a href="#!" class="ftr-menu-link">Категория 2</a>
+									<a href="#!" class="ftr-menu-link ftr-cat">Каталог</a>
+									<a href="#!" class="ftr-menu-link pc">Категория 1</a>
+									<a href="#!" class="ftr-menu-link pc">Категория 2</a>
+									<a href="#!" class="ftr-menu-link pc">Категория 2</a>
+									<a href="#!" class="ftr-menu-link pc">Категория 2</a>
+									<a href="#!" class="ftr-menu-link pc">Категория 2</a>
 								</div>
 							</div>
 							<div class="col-lg-3">
@@ -657,6 +865,179 @@
 					</div>
 				</div>
 			</footer>
+		</div>
+
+        <!-- Выбор города Modal -->
+		<div class="modal fade city-modal" id="select-city" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Выберите свой город</h5>
+						<button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+								<path d="M1 1L25 25" stroke="#4F4F4F" stroke-width="2"/>
+								<path d="M25 1L1 25" stroke="#4F4F4F" stroke-width="2"/>
+							</svg>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="choose-city">
+							<div class="choose-city-search">
+								<form action="#!">
+									<input type="search" placeholder="Поиск">
+								</form>
+							</div>
+
+							<div class="row city-rov">
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<script src="js/jquery-3.7.0.min.js"></script>
