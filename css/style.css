@@ -920,43 +920,6 @@ header .top-con {
 .xit-sec .title {
 	margin-bottom: 30px;
 }
-.tags {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
-	margin-bottom: 54px;
-}
-.tags .tag-in {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-}
-.tags .tag-item a {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	border-radius: 100px;
-	border: 1px solid #ECECF0;
-	color: #424242;
-	font-size: 16px;
-	font-weight: 600;
-	line-height: normal;
-	padding: 13px 40px;
-}
-.tags .tag-item a:hover {
-	background: #3853A4;
-	color: #fff;
-}
-
 .xit-block {
 	border-radius: 20px;
 	border: 1px solid #ECECF0;
@@ -5041,6 +5004,48 @@ input[type=number] {
 	width: 224px;
 }
 
+/* tags */
+.tags {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin-bottom: 54px;
+}
+.tags .tag-in {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+			gap: 0;
+			border: none;
+}
+.tags .tag-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	border-radius: 100px;
+	border: 1px solid #ECECF0;
+	color: #424242;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: normal;
+	padding: 13px 40px;
+}
+.tags .tag-item::after {
+	content: none;
+}
+.tags .tag-item:hover {
+	background: #3853A4;
+	color: #fff;
+}
 
 
 /* custom input type radio / checkbox */
