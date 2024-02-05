@@ -5038,10 +5038,12 @@ input[type=number] {
 	font-weight: 600;
 	line-height: normal;
 	padding: 13px 40px;
+	white-space: nowrap;
 }
 .tags .tag-item::after {
 	content: none;
 }
+.tags .tag-item.active,
 .tags .tag-item:hover {
 	background: #3853A4;
 	color: #fff;
@@ -5142,6 +5144,59 @@ input[type=number] {
 }
 
 /* modals */
+/* Купить в 1 клик modal */
+.click-block {
+	display: flex;
+	align-items: flex-start;
+	gap: 0 22px;
+	width: 100%;
+	padding-bottom: 18px;
+	margin-bottom: 44px;
+	border-bottom: 1px solid #DBDBDB;
+}
+.click-block .click-img {
+	border-radius: 10px;
+	border: 1px solid #F8F8F8;
+	padding: 10px;
+}
+.click-block .click-img img {
+	height: 50px;
+}
+.click-text .pro-name {
+	color: #444;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	margin-bottom: 10px;
+}
+.click-text .pro-price span {
+	color: #585858;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: normal;
+	text-decoration-line: line-through;
+}
+.click-text .pro-price p {
+	color: #424242;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.modal.click-modal .modal-dialog {
+	max-width: 634px;
+}
+.modal.click-modal .modal-header {
+	display: block;
+	margin-bottom: 18px;
+}
+.modal.click-modal .modal-header .modal-title {
+	text-align: left;
+}
+
+
+
+/* city modal */
 .city-modal .modal-dialog {
 	max-width: 673px;
 }
@@ -5360,6 +5415,7 @@ input[type=number] {
 .form-modal .request-button {
 	padding-top: 16px;
 }
+.click-modal .buy-click,
 .form-modal .request-button .request-btn {
 	width: 208px;
 	height: 58px;
@@ -7997,6 +8053,29 @@ input[type=number] {
 	.basket-pro-in::-webkit-scrollbar {
 		width: 0;
 		height: 0;
+	}
+	.click-text .pro-name {
+		font-size: 14px;
+		line-height: 18px;
+		margin-bottom: 8px;
+	}
+	.click-text .pro-price span {
+		font-size: 12px;
+	}
+	.click-text .pro-price p {
+		font-size: 16px;
+	}
+	.click-block {
+		padding-bottom: 16px;
+	}
+	.tag-catalog .link-btn {
+		display: none;
+	}
+	.tags .tag-item {
+		padding: 10px 22px;
+		font-size: 14px;
+		line-height: normal;
+		font-weight: 400;
 	}
 
 

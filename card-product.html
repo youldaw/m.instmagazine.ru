@@ -457,8 +457,8 @@
                                                 <span>В наличии</span>
                                             </div>
                                             <div class="card-btns">
-                                                <a href="#!" class="card-basket-btn">В корзину</a>
-                                                <a href="#!" class="card-buy-btn">Купить в 1 клик</a>
+                                                <a href="#!" class="card-basket-btn" data-bs-toggle="modal" data-bs-target="#select-city">В корзину</a>
+                                                <a href="#!" class="card-buy-btn" data-bs-toggle="modal" data-bs-target="#modal-click">Купить в 1 клик</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1510,7 +1510,7 @@
 			</div>
 		</div>
 
-		<!-- Форма обратной связи Modal -->
+		<!-- Спасибо Modal -->
 		<div class="modal fade thanks-modal" id="modal-thanks" tabindex="-1" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -1892,6 +1892,59 @@
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <!-- Покупка в 1 клик modal -->
+		<div class="modal fade form-modal click-modal" id="modal-click" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Купить в 1 клик</h5>
+						<button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Close">
+							<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+								<path d="M1 1L25 25" stroke="#4F4F4F" stroke-width="2"/>
+								<path d="M25 1L1 25" stroke="#4F4F4F" stroke-width="2"/>
+							</svg>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form action="#!">
+							<div class="request-call">
+                                <div class="click-block">
+                                    <span class="click-img">
+                                        <img src="images/korpus.png" alt="">
+                                    </span>
+
+                                    <div class="click-text">
+                                        <div class="pro-name">Наименование товара</div>
+                                        <div class="pro-price">
+                                            <span>3 402 000 ₽</span>
+                                            <p>1 868 000 ₽</p>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="form-group">
+									<span>Имя*</span>
+									<input type="text" name="name" placeholder="Иван Петр" required>
+								</div>
+								<div class="form-group">
+									<span>Телефон*</span>
+									<input type="tel" name="phone" placeholder="+7 (999) 932-32-32" required>
+								</div>
+                                <div class="form-group">
+									<span>E-mail*</span>
+									<input type="email" name="email" placeholder="E-mail*" required>
+								</div>
+
+								<div class="request-button">
+									<button type="submit" class="buy-click" data-bs-toggle="modal" data-bs-target="#modal-thanks">Отправить</button>
+									<p>Отправляя заявку, я соглашаюсь на обработку моей персональной информации на условиях, определенных Политикой конфиденциальности.</p>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
