@@ -312,6 +312,9 @@ header .top-con {
 	font-weight: 400;
 	line-height: normal;
 }
+.head-block .head-logo .logo-link img {
+	width: 100%;
+}
 
 .head-catalog {
 	display: -webkit-box;
