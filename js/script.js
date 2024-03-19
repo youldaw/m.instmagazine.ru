@@ -1,4 +1,14 @@
 $(function () {
+    $(function () {
+        $('input[name=phone]').mask('+7 (999) 999-99-99');
+    });
+
+    // Поделиться tooltip
+    $('.share-opener').on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.share-tooltip').toggleClass('active');
+    });
 
     // Открытие меню каталога
     $('.catalog-opener').on('click', function (e) {
@@ -156,46 +166,89 @@ $(function () {
         },
     });
 
-
-    // (function() {
-
-    //     'use strict';
-    //     // breakpoint where swiper will be destroyed
-    //     // and switches to a dual-column layout
-    //     const breakpoint = window.matchMedia( '(min-width:31.25em)' );
-    //     // keep track of swiper instances to destroy later
-    //     let mySwiper;
-
-    //     const breakpointChecker = function() {
-    //       // if larger viewport and multi-row layout needed
-    //       if ( breakpoint.matches === true ) {
-    //         // clean up old instances and inline styles when available
-    //         if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
-    //         // or/and do nothing
-    //         return;
-    //         // else if a small viewport and single column layout needed
-    //         } else if ( breakpoint.matches === false ) {
-    //           // fire small viewport version of swiper
-    //           return enableSwiper();
-    //         }
-    //     };
-
-    //     const enableSwiper = function() {
-    //       mySwiper = new Swiper ('.xit-mob-slide', {
-    //         loop: true,
-    //         slidesPerView: 'auto',
-    //         centeredSlides: true,
-    //         a11y: true,
-    //         keyboardControl: true,
-    //         grabCursor: true,
-    //       });
-    //     };
-    //     // keep an eye on viewport size changes
-    //     breakpoint.addListener(breakpointChecker);
-    //     // kickstart
-    //     breakpointChecker();
-
-    // })();
-
 });
+
+// script.js
+$(document).ready(function () {
+    $('#fileInput').change(function () {
+        const fileList = this.files;
+        const fileListContainer = $('#fileList');
+        fileListContainer.empty();
+        for (let i = 0; i < fileList.length; i++) {
+            const fileName = fileList[i].name;
+            const fileSize = formatFileSize(fileList[i].size);
+            const listItem = $('<li>').addClass('item');
+            const nameSpan = $('<span>').addClass('name').text(`${fileName} (${fileSize})`);
+            const removeDiv = $('<div>').addClass('remove').html('<i class="fa-solid fa-trash-can"></i>');
+            listItem.append(nameSpan).append(removeDiv);
+            fileListContainer.append(listItem);
+        }
+    });
+
+    $(document).on('click', '.remove', function () {
+        $(this).closest('.item').remove();
+    });
+});
+
+function formatFileSize(size) {
+    const units = ["B", "KB", "MB", "GB"];
+    let index = 0;
+
+    while (size >= 1024 && index < units.length - 1) {
+        size /= 1024;
+        index++;
+    }
+
+    return `${size.toFixed(2)} ${units[index]}`;
+}
+
+
+
+$(document).on("mouseenter", ".header-block__mid-catalog", function () {
+    $(".header-catalog").addClass("active");
+});
+
+$(document).on("mouseleave", ".header-block__mid-catalog", function () {
+    if (!$(".header-catalog").is(":hover")) {
+        $(".header-catalog").removeClass("active");
+    }
+});
+
+$(document).on("mouseleave", ".header-catalog", function () {
+    if (!$(this).is(":hover")) {
+        $(".header-block__mid-catalog").removeClass("active");
+    }
+});
+
+if ($(".header-catalog__inner.active").length < 1) {
+    $(".header-catalog__left ul li:first, .header-catalog__inner:first").addClass("active");
+}
+
+$(document).on("mouseenter", ".header-catalog__left ul li a", function () {
+    var e = $(this).parent("li"),
+        t = e.index();
+    e.addClass("active").siblings().removeClass("active");
+    $(".header-catalog__inner").eq(t).addClass("active").siblings().removeClass("active");
+});
+
+$(document).on("mouseenter", ".header-block__mid-catalog", function () {
+    $(".header-catalog").addClass("active");
+});
+
+$(document).on("mouseleave", ".header-block__mid-catalog", function () {
+    if (!$(".header-catalog").is(":hover")) {
+        $(".header-catalog").removeClass("active");
+    }
+});
+
+$(document).on("mouseleave", ".header-catalog", function () {
+    if (!$(this).is(":hover")) {
+        $(".header-block__mid-catalog").removeClass("active");
+    }
+});
+
+if ($(".header-catalog__inner.active").length < 1) {
+    $(".header-catalog__left ul li:first, .header-catalog__inner:first").addClass("active");
+}
+
 

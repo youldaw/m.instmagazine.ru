@@ -58,13 +58,13 @@
 							</div>
 
 							<div class="head-contact">
-								<a href="mailto:umico@list.ru" class="mail-link">umico@list.ru</a>
+								<a href="mailto:sales@m-instmagazine.ru" class="mail-link">sales@m-instmagazine.ru</a>
 								<div class="head-contact-tel">
 									<div class="tel-link">
 										<a href="tel:+7 (343) 206-67-57">+7 (343) 206-67-57</a>
 										<span>с 10:00 до 19:00</span>
 									</div>
-									<a href="#!" class="callback-btn">Обратный звонок</a>
+									<a href="#!" class="callback-btn" data-bs-toggle="modal" data-bs-target="#request-modal">Обратный звонок</a>
 								</div>
 								<div class="head-social">
 									<a href="#!" class="head-wt"><img src="images/icons/whatsapp-icon.svg" alt=""></a>
@@ -131,148 +131,854 @@
 								</button>
 								
 								<div class="nav--vertical">
-									<div class="catalog-left-menu">
-										<a href="#!" class="cat-left-link">
-											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
-											<span class="text">Корпусные сверла</span>
-										</a>
-										<a href="#!" class="cat-left-link">
-											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
-											<span class="text">Корпусные сверла</span>
-										</a>
-										<a href="#!" class="cat-left-link">
-											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
-											<span class="text">Микрорезцы</span>
-										</a>
-										<a href="#!" class="cat-left-link">
-											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
-											<span class="text">Оснастка для токарных автоматов</span>
-										</a>
-										<a href="#!" class="cat-left-link">
-											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
-											<span class="text">Осевой твердосплавный инструмент</span>
-										</a>
-										<a href="#!" class="cat-left-link">
-											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
-											<span class="text">Сверлильный инструмент</span>
-										</a>
-										<a href="#!" class="cat-left-link">
-											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
-											<span class="text">Фрезерный инструмент</span>
-										</a>
-										<a href="#!" class="cat-left-link">
-											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
-											<span class="text">Токарный инструмент</span>
-										</a>
-										<a href="#!" class="cat-left-link">
-											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
-											<span class="text">Корпусные сверла</span>
-										</a>
-										<a href="#!" class="cat-left-link">
-											<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
-											<span class="text">Корпусные сверла</span>
-										</a>
-									</div>
-
-									<div class="menu-block">
-										<div class="menu-in">
-											<div class="menu-in-items">
-												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
-
-												<div class="menu-subcategory">
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-												</div>
-											</div>
-											<div class="menu-in-items">
-												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
-
-												<div class="menu-subcategory">
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-												</div>
-											</div>
-											<div class="menu-in-items">
-												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
-
-												<div class="menu-subcategory">
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-												</div>
-											</div>
-											<div class="menu-in-items">
-												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
-
-												<div class="menu-subcategory">
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-												</div>
+									<div class="header-catalog__outer size-container">
+										<div class="header-catalog__left">
+											<div class="header-catalog__left-scroll">
+												<ul>
+													<li class="active">
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Микрорезцы</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Оснастка для токарных автоматов</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Осевой твердосплавный инструмент</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Сверлильный инструмент</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Фрезерный инструмент</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Токарный инструмент</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+													<li>
+														<a href="#!" class="cat-left-link">
+															<span class="link-img"><img src="images/catalog-link-img.png" alt=""></span>
+															<span class="text">Корпусные сверла</span>
+														</a>
+													</li>
+												</ul>
 											</div>
 										</div>
 
-										<div class="menu-in">
-											<div class="menu-in-items">
-												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
-
-												<div class="menu-subcategory">
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
+										<div class="header-catalog__right">
+											<div class="header-catalog__right-scroll">
+												<div class="header-catalog__inner active">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+				
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
 												</div>
-											</div>
-											<div class="menu-in-items">
-												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
-
-												<div class="menu-subcategory">
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
 												</div>
-											</div>
-											<div class="menu-in-items">
-												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
-
-												<div class="menu-subcategory">
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
 												</div>
-											</div>
-											<div class="menu-in-items">
-												<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
 
-												<div class="menu-subcategory">
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
-													<a href="#!">Содержание подкатегории</a>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="header-catalog__inner">
+													<div class="menu-block">
+														<div class="menu-in">
+															<div class="menu-in-items">
+																<span class="menu-in-subcat">Подкатегория <img src="images/icons/catalog-subcategory-icon.svg" alt=""></span>
+				
+																<div class="menu-subcategory">
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																	<a href="#!">Содержание подкатегории</a>
+																</div>
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -303,7 +1009,7 @@
 									<span class="text">Каталог</span>
 								</button>
 							</div>
-							<a href="#!" class="login">
+							<a href="login.html" class="login">
 								<span class="icon"><img src="images/icons/user-icon.svg" alt=""></span>
 								<span class="text">Войти</span>
 							</a>
@@ -505,6 +1211,294 @@
 							</div>
 
 							<div class="row city-rov">
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
+								<div class="col-lg-4">
+									<div class="choose-city-item">
+										<img src="images/icons/location-icon.svg" alt="">
+										<span>Екатеринбург</span>
+									</div>
+								</div>
 								<div class="col-lg-4">
 									<div class="choose-city-item">
 										<img src="images/icons/location-icon.svg" alt="">
@@ -1122,6 +2116,7 @@
 		</div>
 
 		<script src="js/jquery-3.7.0.min.js"></script>
+		<script src="js/jquery.maskedinput.min.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="libs/bootstrap5/popper.js"></script>
 		<script src="libs/bootstrap5/bootstrap.min.js"></script>
